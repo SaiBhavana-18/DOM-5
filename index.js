@@ -21,7 +21,7 @@ function leaderboard(){
         document.querySelector("#min").innerText = eval(bag);
         // evaluate the string and return single calculated value.
       } else if (eval(bag)>num2){
-        document.querySelector("#max").innerText = eval(bag);
+        document.querySelector("#max0").innerText = eval(bag);
       }
 
 }
