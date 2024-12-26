@@ -1,82 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <style>
-    h1 {
-        text-align: center;
-        font-size: 60px;
-        color: teal;
-      }
+  #MINMAX{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+  
+  #score {
+    height: 90px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
 
-      #leaderboard {
-        width: 500px;
-        box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45),
+  #leaderboard {
+        width: 400px;
+        /*box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45),
           0px 25px 20px -20px rgba(0, 0, 0, 0.45),
-          25px 0 20px -20px rgba(0, 0, 0, 0.45);
+          25px 0 20px -20px rgba(0, 0, 0, 0.45);*/
         margin: auto;
         padding: 40px;
         border-radius: 30px;
       }
-
-      #display {
-        height: 80px;
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      }
-
-      #keyboard {
+  #keyboard {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 80px);
-        gap: 10px;
-        margin-top: 10px;
+        gap: 5px;
+        margin-top: 20px;
       }
-      /*#keyboard > div {
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-          0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    #keyboard > div {
+        /*box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px -1px rgba(0, 0, 0, 0.1);*/
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 25px;
-        font-weight: bold;
+        font-weight:normal;
         border-radius: 10px;
-      }*/
-
-      #keyboard > div:hover {
-        background-color: teaL;
-        color: white;
       }
-      #display {
-        font-size: 30px;
+      #leaderboard >.zero{
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight:normal;
+        gap: 10px;
+        margin-top: 30px;
+
+      }
+      #leaderboard >#btn{
+        
+       
+        padding:20px;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+        font-size: 25px;
+        font-weight:normal;
+        gap: 50px;
+        margin-top: 20px;
+
+      }
+      #enter{
+        height:80%;
+        width:300px
       }
 </style>
 <body>
-   <h1>Leaderboard</h1>
-   <section id="leaderboard">
-    <div id="display"> </div>
-
-        <div id="keyboard">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>0</div>
-        </div>
-   
-   </section>
-
+  <div id="MINMAX">
+  <div>
+    <label>MIN</label>
+    <br> <br/>
+    <input type="number" id="min" placeholder="Enter minimum number">
+    
+  </div>
+  <div>
+    <label>MAX</label>
+    <br> <br/>
+    <input type="number" id="max" placeholder="Enter maximum number">
+  
+  </div>
+  </div>
+  <section id="leaderboard">
+  <div id=score></div>
+  <div id="keyboard">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>0</div>
+  </div>
+  <!--<div class="zero">0</div>-->
+  <div id="btn">
+    <button id="enter">Enter</button>
+  </div>
+  </section>
 </body>
 </html>
+<script src="./index.js"></script>
